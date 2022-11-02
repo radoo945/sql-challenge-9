@@ -7,16 +7,18 @@ CREATE TABLE "Department" (
 );
 
 CREATE TABLE "Dept_manager" (
+    "dept_no" VARCHAR   NOT NULL,
     "emp_no" INTEGER   NOT NULL,
-    "dept_no" VARCHAR   NOT NULL
+    
     CONSTRAINT "pk_Dept_manager" PRIMARY KEY (
         "dept_no", "emp_no"
      )
 );
 
 CREATE TABLE "Dept_emp" (
+    "emp_no" INTEGER   NOT NULL,
     "dept_no" VARCHAR   NOT NULL,
-    "emp_no" INTEGER   NOT NULL
+    
     CONSTRAINT "pk_Dept_emp" PRIMARY KEY (
         "dept_no", "emp_no"
      )
